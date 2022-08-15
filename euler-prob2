@@ -1,0 +1,25 @@
+// S(summary) - find the sum of all even numbers from the Fibbonacci sequence from 1 - 4,000,000
+
+// E(examples) - First 10 numbers in Fibbonacci sequence: [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+//               Even numbers only of First 10 numbers in Fibbonacci sequence: [2, 8, 34]
+//               Sum of First 10 (Even numbers only) in Fibbonacci sequence: 44
+
+// A(approach) - 
+// A-2(alternate approach   1.  Write a function to calculate all numbers in the Fibbonacci sequence from ranging 1 - 4,000,000.
+//                          2.  Create an array that holds only the even numbers from the above function.
+//                          3.  Use reduce function to calculate the sum of the array.
+
+// T(test) - 
+
+// function to calculate all numbers in the Fibbonacci sequence ranging from 1 - 4,000,000.
+
+function fibbonacci_calculation(range){
+    // accumulator variable
+    let sum = 0;
+    //loop for calculation
+    for(let i=1;i<range;i+=i){
+        //modulo operation returns 0 for multiples of 2
+        if(i%2==0){
+            sum += i;
+        }
+    }
